@@ -11,8 +11,8 @@
             --yellow: #e8ff2f;
             --white: #ffffff;
             --dark: #1a1a2e;
-            --gray-light: #f8fafc;
-            --gray-text: #4a5568;
+            --gray-light: #311b9c; /* Modificado a un tono índigo complementario para secciones alternas */
+            --gray-text: #cbd5e1;  /* Modificado a gris claro para mantener legibilidad sobre fondo oscuro */
         }
 
         * {
@@ -27,8 +27,8 @@
         }
 
         body {
-            background-color: var(--white);
-            color: var(--dark);
+            background-color: var(--indigo); /* Predomina el color índigo como fondo general */
+            color: var(--white);
             line-height: 1.6;
         }
 
@@ -41,12 +41,12 @@
 
         section {
             padding: 80px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #4c32d4;
         }
 
         .section-title {
             font-size: 2rem;
-            color: var(--indigo);
+            color: var(--white); /* Cambiado a blanco para contraste */
             text-align: center;
             margin-bottom: 40px;
             position: relative;
@@ -75,23 +75,23 @@
             text-transform: uppercase;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(64, 37, 198, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(64, 37, 198, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
 
         /* --- MENÚ DE NAVEGACIÓN --- */
         header {
-            background-color: var(--white);
+            background-color: #200f78; /* Índigo oscuro para la barra de navegación */
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-bottom: 2px solid var(--indigo);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border-bottom: 2px solid var(--yellow);
         }
 
         .nav-container {
@@ -116,7 +116,7 @@
         .brand-name {
             font-size: 1.4rem;
             font-weight: 800;
-            color: var(--indigo);
+            color: var(--white);
         }
 
         .nav-menu {
@@ -127,7 +127,7 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: var(--gray-text);
+            color: #e2e8f0;
             font-weight: 600;
             font-size: 0.95rem;
             transition: color 0.2s;
@@ -135,8 +135,8 @@
         }
 
         .nav-menu a:hover {
-            color: var(--indigo);
-            border-bottom: 2px solid var(--indigo);
+            color: var(--yellow);
+            border-bottom: 2px solid var(--yellow);
         }
 
         /* --- 1. INICIO (HOME) --- */
@@ -173,25 +173,25 @@
         }
 
         .resumen-breve {
-            background-color: var(--white);
+            background-color: #200f78; /* Fondo índigo oscuro para tarjetas contenedoras */
             margin-top: -40px;
             border-radius: 10px;
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
         .resumen-card h3 {
-            color: var(--indigo);
+            color: var(--yellow);
             margin-bottom: 10px;
             font-size: 1.2rem;
         }
 
         .stat-banner {
-            background-color: #f4f2fd;
-            border-left: 5px solid var(--indigo);
+            background-color: #200f78;
+            border-left: 5px solid var(--yellow);
             padding: 25px;
             border-radius: 4px;
             margin-top: 40px;
@@ -201,7 +201,7 @@
         .stat-banner p {
             font-size: 1.3rem;
             font-weight: 700;
-            color: var(--indigo);
+            color: var(--white);
         }
 
         /* --- 2. EL PROBLEMA --- */
@@ -214,7 +214,7 @@
             max-width: 800px;
             margin: 0 auto 40px auto;
             font-size: 1.1rem;
-            color: var(--gray-text);
+            color: #e2e8f0;
         }
 
         .problema-grid {
@@ -224,12 +224,12 @@
         }
 
         .problema-card {
-            background-color: var(--white);
+            background-color: var(--indigo);
             padding: 30px;
             border-radius: 8px;
             text-align: center;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #553cd6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .problema-icon {
@@ -239,7 +239,7 @@
 
         .problema-card h3 {
             margin-bottom: 10px;
-            color: var(--dark);
+            color: var(--yellow);
         }
 
         /* --- 3. NUESTRA SOLUCIÓN --- */
@@ -251,12 +251,12 @@
         }
 
         .solucion-visual {
-            background-color: var(--indigo);
+            background-color: #200f78;
             color: var(--white);
             padding: 50px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(64, 37, 198, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .solucion-visual h3 {
@@ -278,14 +278,14 @@
         }
 
         .solucion-item {
-            background-color: var(--gray-light);
+            background-color: #200f78;
             padding: 20px;
             border-radius: 6px;
-            border-left: 4px solid var(--indigo);
+            border-left: 4px solid var(--yellow);
         }
 
         .solucion-item h4 {
-            color: var(--indigo);
+            color: var(--yellow);
             margin-bottom: 5px;
         }
 
@@ -301,17 +301,20 @@
         }
 
         .paso-card {
-            background-color: var(--white);
+            background-color: var(--indigo);
             padding: 30px 20px;
             border-radius: 8px;
             text-align: center;
             position: relative;
-            border-top: 4px solid var(--indigo);
+            border-top: 4px solid var(--yellow);
+            border-left: 1px solid #553cd6;
+            border-right: 1px solid #553cd6;
+            border-bottom: 1px solid #553cd6;
         }
 
         .paso-numero {
-            background-color: var(--indigo);
-            color: var(--white);
+            background-color: var(--yellow);
+            color: var(--indigo);
             width: 35px;
             height: 35px;
             border-radius: 50%;
@@ -330,8 +333,8 @@
         }
 
         .ayuda-card {
-            background-color: var(--white);
-            border: 1px solid #e2e8f0;
+            background-color: var(--indigo);
+            border: 1px solid #553cd6;
             padding: 25px;
             border-radius: 8px;
             display: flex;
@@ -341,11 +344,11 @@
         }
 
         .ayuda-card:hover {
-            border-color: var(--indigo);
+            border-color: var(--yellow);
         }
 
         .ayuda-avatar {
-            background-color: #f4f2fd;
+            background-color: #200f78;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -353,8 +356,12 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            color: var(--indigo);
+            color: var(--yellow);
             flex-shrink: 0;
+        }
+
+        .ayuda-card h3 {
+            color: var(--white);
         }
 
         /* --- 6. IMPACTO TRIPLE --- */
@@ -369,19 +376,21 @@
         }
 
         .impacto-card {
-            background-color: var(--white);
+            background-color: var(--indigo);
             padding: 35px;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 1px solid #553cd6;
         }
 
-        .impacto-card.social { border-top: 5px solid #2b6cb0; }
-        .impacto-card.ambiental { border-top: 5px solid #2f855a; }
-        .impacto-card.economico { border-top: 5px solid var(--indigo); }
+        .impacto-card.social { border-top: 5px solid #63b3ed; }
+        .impacto-card.ambiental { border-top: 5px solid #48bb78; }
+        .impacto-card.economico { border-top: 5px solid var(--yellow); }
 
         .impacto-card h3 {
             font-size: 1.4rem;
             margin-bottom: 15px;
+            color: var(--white);
         }
 
         .impacto-card ul {
@@ -398,7 +407,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--indigo);
+            color: var(--yellow);
             font-weight: bold;
         }
 
@@ -420,23 +429,29 @@
             background-color: var(--gray-light);
             padding: 20px;
             border-radius: 6px;
+            border: 1px solid #553cd6;
         }
 
         .dato-numero {
             font-size: 2.2rem;
             font-weight: 800;
-            color: var(--indigo);
+            color: var(--yellow);
         }
 
         .mercado-grafico {
-            background-color: #f4f2fd;
+            background-color: #200f78;
             padding: 40px;
             border-radius: 8px;
             text-align: center;
         }
 
+        /* Fuerza la legibilidad de la meta inicial que tiene estilos inline */
+        .mercado-grafico span[style*="color"] {
+            color: var(--yellow) !important;
+        }
+
         .barra-progreso-bg {
-            background-color: #e2e8f0;
+            background-color: #4a5568;
             height: 25px;
             border-radius: 20px;
             margin: 20px 0;
@@ -444,9 +459,9 @@
         }
 
         .barra-progreso-fill {
-            background-color: var(--indigo);
+            background-color: var(--yellow);
             height: 100%;
-            width: 1%; /* Objetivo inicial */
+            width: 1%; 
             border-radius: 20px;
         }
 
@@ -459,14 +474,17 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto 50px auto;
-            background-color: var(--white);
+            background-color: var(--indigo);
             padding: 30px;
             border-radius: 8px;
             border-left: 5px solid var(--yellow);
             font-size: 1.2rem;
             font-style: italic;
-            color: var(--indigo);
+            color: var(--white);
             font-weight: 600;
+            border-top: 1px solid #553cd6;
+            border-right: 1px solid #553cd6;
+            border-bottom: 1px solid #553cd6;
         }
 
         .equipo-grid {
@@ -476,29 +494,29 @@
         }
 
         .miembro-card {
-            background-color: var(--white);
+            background-color: var(--indigo);
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
             padding: 25px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #553cd6;
         }
 
         .miembro-foto-placeholder {
             width: 100px;
             height: 100px;
-            background-color: #e2e8f0;
+            background-color: #200f78;
             border-radius: 50%;
             margin: 0 auto 15px auto;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
-            color: #a0aec0;
+            color: #cbd5e1;
         }
 
         .miembro-card h4 {
-            color: var(--dark);
+            color: var(--white);
             margin-bottom: 5px;
         }
 
@@ -515,21 +533,21 @@
         }
 
         .noticia-card {
-            background-color: var(--white);
-            border: 1px solid #e2e8f0;
+            background-color: var(--indigo);
+            border: 1px solid #553cd6;
             border-radius: 8px;
             padding: 25px;
             transition: box-shadow 0.2s;
         }
 
         .noticia-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .noticia-tag {
             display: inline-block;
-            background-color: var(--indigo);
-            color: var(--white);
+            background-color: var(--yellow);
+            color: var(--indigo);
             font-size: 0.75rem;
             font-weight: bold;
             padding: 3px 8px;
@@ -541,11 +559,12 @@
         .noticia-card h3 {
             font-size: 1.15rem;
             margin-bottom: 8px;
+            color: var(--white);
         }
 
         /* --- 10. CONTACTO --- */
         #contacto {
-            background-color: var(--dark);
+            background-color: #200f78; /* Mantiene la estética índigo muy oscura */
             color: var(--white);
         }
 
@@ -569,8 +588,8 @@
             width: 100%;
             padding: 12px;
             border-radius: 6px;
-            border: 1px solid #4a5568;
-            background-color: #2d3748;
+            border: 1px solid #553cd6;
+            background-color: var(--indigo);
             color: var(--white);
             font-size: 1rem;
         }
@@ -614,12 +633,12 @@
 
         /* --- FOOTER --- */
         footer {
-            background-color: #0f172a;
+            background-color: #11074a; /* Cierre visual con índigo profundo */
             color: #94a3b8;
             text-align: center;
             padding: 20px;
             font-size: 0.9rem;
-            border-top: 1px solid #334155;
+            border-top: 1px solid #200f78;
         }
 
         /* --- RESPONSIVIDAD --- */
@@ -662,19 +681,19 @@
             <div class="resumen-breve">
                 <div class="resumen-card">
                     <h3>Qué hacemos</h3>
-                    <p>Desarrollamos un sistema inteligente de bandas corporales y analítica predictiva para cuidar la salud de los atletas.</p>
+                    <p>Desarrollamos un sistema inteligente de monitoreo corporal que analiza el esfuerzo físico y las señales de fatiga en tiempo real para disminuir el riesgo de lesiones y optimizar el entrenamiento.</p>
                 </div>
                 <div class="resumen-card">
                     <h3>A quién ayudamos</h3>
-                    <p>Acompañamos a deportistas, entrenadores y entidades deportivas mediante el acceso a tecnología accesible.</p>
+                    <p>Ayudamos a deportistas amateurs y profesionales, entrenadores, kinesiólogos, clubes deportivos, gimnasios y centros de rehabilitación que buscan herramientas accesibles para el seguimiento físico.</p>
                 </div>
                 <div class="resumen-card">
                     <h3>Beneficio principal</h3>
-                    <p>Minimizar el riesgo por sobreesfuerzo y lesiones, aumentando el rendimiento deportivo seguro.</p>
+                    <p>Permite reconocer cuándo una persona está superando sus límites físicos, reduciendo el riesgo de lesiones, agotamiento y sobreentrenamiento, mientras mejora el rendimiento y el bienestar deportivo.</p>
                 </div>
             </div>
             <div class="stat-banner">
-                <p>"Más de la mitad argentinos practica deporte regularmente."</p>
+                <p>"Entrenar más no siempre significa entrenar mejor."</p>
             </div>
         </div>
     </section>
@@ -938,7 +957,7 @@
                         <input type="email" placeholder="Tu Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="4" placeholder="Tu Mensaje" required></textarea>
+                        <input type="textarea" rows="4" placeholder="Tu Mensaje" required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Enviar Mensaje</button>
                 </form>
