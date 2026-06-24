@@ -1,0 +1,763 @@
+
+        /* --- CONFIGURACIÓN BASE Y VARIABLES --- */
+        :root {
+            --indigo: #4025c6;
+            --yellow: #e8ff2f;
+            --white: #ffffff;
+            --dark: #1a1a2e;
+            --gray-light: #311b9c; /* Modificado a un tono índigo complementario para secciones alternas */
+            --gray-text: #cbd5e1;  /* Modificado a gris claro para mantener legibilidad sobre fondo oscuro */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--indigo); /* Predomina el color índigo como fondo general */
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* --- COMPONENTES REUTILIZABLES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #4c32d4;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--white); /* Cambiado a blanco para contraste */
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--yellow);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--yellow);
+            color: var(--indigo);
+            font-weight: bold;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        header {
+            background-color: #200f78; /* Índigo oscuro para la barra de navegación */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border-bottom: 2px solid var(--yellow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 120px;
+        }
+
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 5px 0;
+        }
+
+        .nav-menu a:hover {
+            color: var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+        }
+
+        /* --- 1. INICIO (HOME) --- */
+        #inicio {
+            padding-top: 0;
+            border-bottom: none;
+        }
+
+        .hero {
+            background-color: var(--indigo);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-logo-sub {
+            font-size: 1.1rem;
+            color: var(--yellow);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-btn-container {
+            margin-top: 15px;
+        }
+
+        .resumen-breve {
+            background-color: #200f78; /* Fondo índigo oscuro para tarjetas contenedoras */
+            margin-top: -40px;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .resumen-card h3 {
+            color: var(--yellow);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .stat-banner {
+            background-color: #200f78;
+            border-left: 5px solid var(--yellow);
+            padding: 25px;
+            border-radius: 4px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stat-banner p {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        /* --- 2. EL PROBLEMA --- */
+        #problema {
+            background-color: var(--gray-light);
+        }
+
+        .problema-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+        }
+
+        .problema-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .problema-card {
+            background-color: var(--indigo);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #553cd6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .problema-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .problema-card h3 {
+            margin-bottom: 10px;
+            color: var(--yellow);
+        }
+
+        /* --- 3. NUESTRA SOLUCIÓN --- */
+        .solucion-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .solucion-visual {
+            background-color: #200f78;
+            color: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .solucion-visual h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .solucion-visual .plus {
+            font-size: 2.5rem;
+            color: var(--yellow);
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .solucion-lista {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .solucion-item {
+            background-color: #200f78;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid var(--yellow);
+        }
+
+        .solucion-item h4 {
+            color: var(--yellow);
+            margin-bottom: 5px;
+        }
+
+        /* --- 4. ¿CÓMO FUNCIONA? --- */
+        #como-funciona {
+            background-color: var(--gray-light);
+        }
+
+        .pasos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .paso-card {
+            background-color: var(--indigo);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            border-top: 4px solid var(--yellow);
+            border-left: 1px solid #553cd6;
+            border-right: 1px solid #553cd6;
+            border-bottom: 1px solid #553cd6;
+        }
+
+        .paso-numero {
+            background-color: var(--yellow);
+            color: var(--indigo);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+        }
+
+        /* --- 5. A QUIÉN AYUDAMOS --- */
+        .ayuda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .ayuda-card {
+            background-color: var(--indigo);
+            border: 1px solid #553cd6;
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: border 0.2s;
+        }
+
+        .ayuda-card:hover {
+            border-color: var(--yellow);
+        }
+
+        .ayuda-avatar {
+            background-color: #200f78;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--yellow);
+            flex-shrink: 0;
+        }
+
+        .ayuda-card h3 {
+            color: var(--white);
+        }
+
+        /* --- 6. IMPACTO TRIPLE --- */
+        #impacto {
+            background-color: var(--gray-light);
+        }
+
+        .impacto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .impacto-card {
+            background-color: var(--indigo);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 1px solid #553cd6;
+        }
+
+        .impacto-card.social { border-top: 5px solid #63b3ed; }
+        .impacto-card.ambiental { border-top: 5px solid #48bb78; }
+        .impacto-card.economico { border-top: 5px solid var(--yellow); }
+
+        .impacto-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .impacto-card ul {
+            list-style: none;
+        }
+
+        .impacto-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .impacto-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--yellow);
+            font-weight: bold;
+        }
+
+/* --- 7. MERCADO Y OPORTUNIDAD --- */
+        .mercado-wrapper {
+            display: flex;
+            flex-direction: column; /* Cambiado a columna para poner uno arriba y otro abajo */
+            gap: 35px;             /* Espaciado óptimo entre los bloques superior e inferior */
+            align-items: center;   /* Centra ambos bloques perfectamente */
+            width: 100%;
+        }
+
+        .mercado-datos {
+            display: flex;
+            flex-direction: row;   /* Las tarjetas de datos ahora se alinean lado a lado arriba */
+            flex-wrap: wrap;       /* Permite que se acomoden en celulares */
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+            max-width: 900px;      /* Mismo ancho máximo que el gráfico inferior para perfecta simetría */
+        }
+
+        .dato-box {
+            background-color: var(--gray-light);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #553cd6;
+            flex: 1;               /* Hace que todas las tarjetas distribuyan el ancho de forma equitativa */
+            min-width: 200px;      /* Evita que se aplasten en pantallas chicas */
+        }
+
+        .dato-numero {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--yellow);
+        }
+
+/* Contenedor Principal de Mercado */
+.market-opportunity-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;        /* Ajustado para alinearse con las tarjetas superiores */
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; 
+}
+
+.market-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color:#e8ff2f;
+    font-weight: 600;
+}
+
+/* Estructura Base de Cajas Anidadas */
+.market-box {
+    border-radius: 16px;
+    padding: 10px 24px; 
+    margin-top: 8px;    
+    box-shadow: 0 4px 20px #200f78(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(119, 0, 255, 0.1);
+}
+
+/* Estilos Específicos por Nivel */
+.tam-box {
+    background: rgba(42, 31, 70, 0.4); 
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.sam-box {
+    background: rgba(34, 30, 59, 0.6);
+    border-color: #e8ff2f(0, 242, 254, 0.3);
+    margin-left: 6px;   
+    margin-right: 6px;  
+}
+
+.som-box {
+    background: linear-gradient(135deg, #200f78(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+    border: 2px solid #e8ff2f; 
+    box-shadow: 0 0 25px #e8ff2f(0, 242, 254, 0.2);
+    margin-left: 6px;   
+    margin-right: 6px;  
+}
+/* Encabezados y Etiquetas */
+.market-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.market-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.market-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.tam-badge { background-color: #64748b; color: #fff; }
+.sam-badge { background-color: #e8ff2f; color: #fff; }
+.som-box-badge { background-color: #e8ff2f; color:#200f78; }
+
+.market-description {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+}
+
+/* Grid de Métricas e Impactos */
+.market-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    background: #200f78(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 1.6rem;
+    color: #f1f5f9;
+    font-weight: 700;
+}
+
+.stat-item span {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Resaltado del SOM (Tu 1% Objetivo) */
+.highlight-stat strong {
+    color: #e8ff2f !important;
+    font-size: 1.8rem;
+}
+
+.som-footer-badge {
+    display: inline-block;
+    margin-top: 15px;
+    background: #200f78(0, 242, 254, 0.1);
+    border: 1px solid #e8ff2f(0, 242, 254, 0.3);
+    color: #e8ff2f;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Adaptabilidad para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .sam-box, .som-box {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 16px;
+    }
+    .market-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+        /* --- 8. SOBRE NOSOTROS --- */
+        #equipo {
+            background-color: var(--gray-light);
+        }
+
+        .historia-box {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            background-color: var(--indigo);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--yellow);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--white);
+            font-weight: 600;
+            border-top: 1px solid #553cd6;
+            border-right: 1px solid #553cd6;
+            border-bottom: 1px solid #553cd6;
+        }
+
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .miembro-card {
+            background-color: var(--indigo);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 25px;
+            border: 1px solid #553cd6;
+        }
+
+        .miembro-foto-placeholder {
+            width: 100px;
+            height: 100px;
+            background-color: #200f78;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #cbd5e1;
+        }
+
+        .miembro-card h4 {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .miembro-card p {
+            color: var(--gray-text);
+            font-size: 0.9rem;
+        }
+
+        /* --- 9. NOTICIAS / AVANCES --- */
+        .noticias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .noticia-card {
+            background-color: var(--indigo);
+            border: 1px solid #553cd6;
+            border-radius: 8px;
+            padding: 25px;
+            transition: box-shadow 0.2s;
+        }
+
+        .noticia-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .noticia-tag {
+            display: inline-block;
+            background-color: var(--yellow);
+            color: var(--indigo);
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .noticia-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        /* --- 10. CONTACTO --- */
+        #contacto {
+            background-color: #200f78; /* Mantiene la estética índigo muy oscura */
+            color: var(--white);
+        }
+
+        #contacto .section-title {
+            color: var(--white);
+        }
+
+        .contacto-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .form-simple {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #553cd6;
+            background-color: var(--indigo);
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--yellow);
+        }
+
+        .btn-submit {
+            background-color: var(--yellow);
+            color: var(--indigo);
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        .contacto-info h3 {
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .redes-lista {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .redes-lista li {
+            margin-bottom: 15px;
+        }
+
+        .redes-lista a {
+            color: var(--yellow);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #11074a; /* Cierre visual con índigo profundo */
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #200f78;
+        }
+
+        /* --- RESPONSIVIDAD --- */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .nav-menu { flex-wrap: wrap; justify-content: center; }
+            .solucion-wrapper, .mercado-wrapper, .contacto-wrapper { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
