@@ -367,6 +367,469 @@
             margin: 0 auto 15px auto;
         }
 
+        /* =================================================================== */
+/* SECCIÓN ESPECIAL: TECNOLOGÍA LESSION (DESGLOSE COMPLETO) */
+/* =================================================================== */
+.tech-section-main {
+    background: linear-gradient(180deg, rgba(13, 6, 40, 0.9) 0%, rgba(27, 13, 92, 0.95) 50%, rgba(13, 6, 40, 0.9) 100%);
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.badge-tech {
+    background-color: var(--yellow-lime);
+    color: var(--indigo-bg);
+    font-weight: 900;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(232, 255, 47, 0.4);
+}
+
+.tech-main-title {
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.tech-description {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+}
+
+.tech-hero-render {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.svg-render-band {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+}
+
+/* CONTENEDOR DE BLOQUES TECNOLÓGICOS */
+.tech-block {
+    margin-top: 90px;
+}
+
+.block-title-wrapper {
+    margin-bottom: 45px;
+}
+
+.sub-number {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--yellow-lime);
+    background-color: rgba(232, 255, 47, 0.1);
+    border: 1px solid var(--yellow-lime);
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.block-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.block-subtitle {
+    color: var(--gray-text);
+    font-size: 1.05rem;
+}
+
+/* SECCIÓN 1: VISTA EXPLOTADA */
+.exploded-view-container {
+    background-color: var(--indigo-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 20px;
+}
+
+.svg-exploded {
+    width: 100%;
+    height: auto;
+}
+
+.exploded-labels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.label-card {
+    background-color: var(--indigo-bg);
+    border-top: 3px solid var(--yellow-lime);
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.label-card h4 {
+    color: var(--yellow-lime);
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+.label-card p {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+/* SECCIÓN 2: CORAZÓN ELECTRÓNICO (TARJETAS) */
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.component-card {
+    background-color: var(--indigo-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px 22px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.component-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--yellow-lime);
+    box-shadow: var(--glow-shadow);
+}
+
+.component-svg-box {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px auto;
+}
+
+.component-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.component-card h4 {
+    color: var(--yellow-lime);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.component-card p {
+    font-size: 0.92rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+/* SECCIÓN 3: DIAGRAMA DE FLUJO PIPELINE */
+.flow-pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--indigo-card);
+    border: 1px solid var(--border-color);
+    padding: 40px 25px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.flow-node {
+    background-color: var(--indigo-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px 15px;
+    text-align: center;
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.flow-node:hover {
+    border-color: var(--electric-blue);
+    transform: scale(1.05);
+}
+
+.highlight-node {
+    border: 2px solid var(--yellow-lime);
+    box-shadow: 0 0 15px rgba(232, 255, 47, 0.3);
+}
+
+.alert-node {
+    border: 2px solid #ff4757;
+}
+
+.flow-icon {
+    font-size: 2.2rem;
+}
+
+.flow-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.flow-arrow {
+    color: var(--yellow-lime);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* SECCIÓN 4: APLICACIÓN MOBILE Y MOCKUPS */
+.app-display-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.phones-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.phone-mockup {
+    width: 220px;
+    height: 440px;
+    background-color: #080417;
+    border: 4px solid #3821aa;
+    border-radius: 36px;
+    padding: 12px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.phone-notch {
+    width: 80px;
+    height: 14px;
+    background-color: #3821aa;
+    margin: 0 auto 10px auto;
+    border-radius: 10px;
+}
+
+.phone-screen {
+    background-color: #120938;
+    height: calc(100% - 24px);
+    border-radius: 24px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-header-ui {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.app-brand { color: var(--yellow-lime); }
+.live-dot { color: #2ed573; }
+
+.widget-metric {
+    background-color: #1b0d5c;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.metric-val {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--yellow-lime);
+}
+
+.metric-lbl {
+    font-size: 0.7rem;
+    color: var(--gray-text);
+}
+
+.widget-chart {
+    background-color: #1b0d5c;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.chart-title {
+    font-size: 0.65rem;
+    color: var(--gray-text);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sparkline-svg {
+    width: 100%;
+    height: 40px;
+}
+
+.widget-stats-row {
+    display: flex;
+    gap: 8px;
+}
+
+.mini-stat {
+    flex: 1;
+    background-color: #1b0d5c;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.mini-stat span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.mini-stat small {
+    font-size: 0.6rem;
+    color: var(--gray-text);
+}
+
+/* PANTALLA ALERTA */
+.alert-box-ui {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.alert-icon-big {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.alert-box-ui h4 {
+    color: #ff4757;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.alert-sub {
+    font-size: 0.75rem;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.alert-recommendation {
+    background-color: rgba(255, 71, 87, 0.15);
+    border: 1px solid #ff4757;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.7rem;
+    color: #ffdae0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.btn-app-action {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    width: 100%;
+}
+
+.app-features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: var(--indigo-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.feat-icon {
+    font-size: 1.8rem;
+    background-color: var(--indigo-bg);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--yellow-lime);
+}
+
+.feat-content h4 {
+    color: var(--yellow-lime);
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+.feat-content p {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+/* SECCIÓN 5: PROTOTIPO EXPUESTO */
+.prototype-container {
+    background-color: var(--indigo-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 30px;
+}
+
+.prototype-explanation {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 35px auto;
+    font-size: 1.05rem;
+    color: var(--gray-text);
+}
+
+.prototype-visual-board {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.svg-prototype {
+    width: 100%;
+    height: auto;
+}
+
+.proto-callouts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.p-tag {
+    background-color: var(--indigo-bg);
+    border: 1px solid var(--yellow-lime);
+    color: var(--yellow-lime);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
         /* --- 5. A QUIÉN AYUDAMOS --- */
         .ayuda-grid {
             display: grid;
