@@ -4,7 +4,7 @@
             --indigo: #4025c6;
             --yellow: #e8ff2f;
             --white: #ffffff;
-            --dark: #1a1a2e;
+            --dark: #5656d1;
             --gray-light: #311b9c; /* Modificado a un tono índigo complementario para secciones alternas */
             --gray-text: #cbd5e1;  /* Modificado a gris claro para mantener legibilidad sobre fondo oscuro */
         }
@@ -371,7 +371,7 @@
 /* SECCIÓN ESPECIAL: TECNOLOGÍA LESSION (DESGLOSE COMPLETO) */
 /* =================================================================== */
 .tech-section-main {
-    background: linear-gradient(180deg, rgba(13, 6, 40, 0.9) 0%, rgba(27, 13, 92, 0.95) 50%, rgba(13, 6, 40, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(47, 17, 165, 0.9) 0%, rgba(61, 28, 190, 0.9) 50%, rgba(70, 40, 189, 0.9) 100%);
     padding: 80px 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
